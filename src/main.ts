@@ -1,17 +1,8 @@
-/*
-
-______     _     _     _       ___  ________ _   _______
-| ___ \   | |   | |   (_)      |  \/  |_   _| \ | |  _  \
-| |_/ ___ | |   | |    _ ______| .  . | | | |  \| | | | |
-|  __/ _ \| |   | |   | |______| |\/| | | | | . ` | | | |
-| | | (_) | |___| |___| |      | |  | |_| |_| |\  | |/ /
-\_|  \___/\_____\_____|_|      \_|  |_/\___/\_| \_|___/
-
-*/
-
-import { ErrorMapper } from './utils/ErrorMapper';
+import { ErrorMapper } from "utils/ErrorMapper";
 
 export const loop = ErrorMapper.wrapLoop(() => {
+
+  console.log("asd");
     // ---------------------------------------------------------------------------------------------------------
     // Performance Timer
     var startGlobal = new Date().getTime();
@@ -21,7 +12,7 @@ export const loop = ErrorMapper.wrapLoop(() => {
     var endGlobal = new Date().getTime();
     var timeGlobal = endGlobal - startGlobal;
 
-    var infoRoom = Game.spawns.Spawn1.room.name;
+    var infoRoom = Game.spawns.Nexus.room.name;
 
     Game.rooms[infoRoom].visual.text('⏳ ' + 'Performance: ' + timeGlobal + 'ms', 0, 1, { align: 'left', opacity: 1 });
     Game.rooms[infoRoom].visual.text(

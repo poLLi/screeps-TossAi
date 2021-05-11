@@ -18,5 +18,6 @@
     },
     "[typescript]": {
         "editor.formatOnSave": true
-    }
+    },
+    "git.ignoreLimitWarning": true
 }
